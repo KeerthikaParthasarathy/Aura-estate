@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aura Estates | Luxury Real Estate & Investments</title>
+  <title>Aura Estates | Ultra-Luxury Real Estate & Institutional Capital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Header / Navigation -->
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">Aura<span>Estates</span></a>
@@ -18,7 +18,8 @@
         <a href="#residential">Residential</a>
         <a href="#commercial">Commercial</a>
         <a href="#reits">REITs</a>
-        <a href="#track-record">Track Record</a>
+        <a href="#calculator">ROI Calculator</a>
+        <a href="#services">Bespoke Services</a>
       </nav>
       <a href="#contact" class="btn-primary">Book Consultation</a>
     </div>
@@ -27,28 +28,28 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <div class="badge">Prime Global Real Estate</div>
+      <div class="badge">Prime Global Real Estate & Private Capital</div>
       <h1>Where Architectural Elegance Meets Strategic Capital</h1>
-      <p>Curated luxury residences, Grade-A commercial leasing, and high-yield REIT investment portfolios.</p>
+      <p>Curated private estates, Grade-A commercial towers, and institutional-grade REIT portfolios.</p>
 
-      <!-- Search Filter Tab -->
+      <!-- Dynamic Search Filter Box -->
       <div class="search-box">
         <div class="search-tabs">
           <button class="tab-btn active" onclick="switchFilter('buy')">Buy Residential</button>
           <button class="tab-btn" onclick="switchFilter('rent')">Commercial Lease</button>
-          <button class="tab-btn" onclick="switchFilter('reit')">REITs & Funds</button>
+          <button class="tab-btn" onclick="switchFilter('reit')">REIT Portfolios</button>
         </div>
         <div class="search-inputs">
           <div class="input-group">
-            <label>Location</label>
-            <input type="text" placeholder="e.g. Dubai, London, Mumbai" />
+            <label>Prime Location</label>
+            <input type="text" placeholder="e.g. London, Dubai, New York, Singapore" />
           </div>
           <div class="input-group">
-            <label>Asset Type</label>
+            <label>Asset Category</label>
             <select id="assetSelect">
-              <option>Penthouse / Villa</option>
-              <option>Prime Office Floor</option>
-              <option>High-Yield REIT</option>
+              <option>Waterfront Villa / Sky Penthouse</option>
+              <option>Grade-A Corporate Floor</option>
+              <option>Automated Logistics Trust</option>
             </select>
           </div>
           <button class="btn-search">Explore Listings</button>
@@ -57,76 +58,116 @@
     </div>
   </section>
 
-  <!-- Track Record & Experience -->
-  <section class="section track-record" id="track-record">
+  <!-- Experience & Credibility Ticker -->
+  <section class="section track-record" id="experience">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
           <h3>$520M+</h3>
-          <p>Transaction Volume</p>
+          <p>Transaction Volume Transacted</p>
         </div>
         <div class="stat-card">
           <h3>16+</h3>
-          <p>Years of Advisory</p>
+          <p>Years of Institutional Advisory</p>
         </div>
         <div class="stat-card">
           <h3>1,400+</h3>
-          <p>Homes & Offices Placed</p>
+          <p>Global Residences & Offices Placed</p>
         </div>
         <div class="stat-card">
           <h3>9.4%</h3>
-          <p>Average REIT Net Yield</p>
+          <p>Historical REIT Net Annual Yield</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Residential Showcase -->
+  <!-- Section 3: Residential Showcase (Horizontal Scroll + Day/Twilight Toggle) -->
   <section class="section" id="residential">
     <div class="container">
-      <div class="section-head">
-        <h2>Featured Residential Estates</h2>
-        <p>Hand-picked residences designed for discerning homeowners and investors.</p>
+      <div class="section-head-flex">
+        <div>
+          <span class="sub-head">Curated Living</span>
+          <h2>Featured Residential Homes</h2>
+          <p>Horizontal luxury showcase. Toggle viewing mode or swipe to explore.</p>
+        </div>
+        <div class="controls-wrap">
+          <!-- Day/Twilight Architectural Toggle -->
+          <button class="mode-toggle-btn" id="lightingToggle" onclick="toggleLightingMode()">
+            ☀️ Day View
+          </button>
+          <div class="scroll-arrows">
+            <button class="arrow-btn" onclick="scrollSlider('res-scroll', -390)">←</button>
+            <button class="arrow-btn" onclick="scrollSlider('res-scroll', 390)">→</button>
+          </div>
+        </div>
       </div>
-      <div class="grid-cards">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Villa" />
-          <div class="card-body">
+
+      <div class="horizontal-scroll" id="res-scroll">
+        <!-- Res Card 1 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('res1')">
+          <div class="img-wrap">
+            <img id="img-res1" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" alt="Villa" />
             <span class="tag">For Sale</span>
+          </div>
+          <div class="h-card-body">
             <h3>The Lumina Waterfront Villa</h3>
-            <p class="loc">Palm Horizon, Coastal Bay</p>
+            <p class="loc">Palm Horizon • Coastal Bay</p>
             <div class="specs">5 Beds • 6 Baths • 7,200 sq.ft</div>
-            <div class="card-footer">
+            <div class="h-card-footer">
               <span class="price">$4,850,000</span>
-              <button class="btn-outline">Inquire</button>
+              <button class="btn-outline">View Drill-down</button>
             </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Penthouse" />
-          <div class="card-body">
+        <!-- Res Card 2 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('res2')">
+          <div class="img-wrap">
+            <img id="img-res2" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Penthouse" />
             <span class="tag">For Sale</span>
+          </div>
+          <div class="h-card-body">
             <h3>Skyline Crown Penthouse</h3>
             <p class="loc">Midtown Financial Core</p>
             <div class="specs">4 Beds • 5 Baths • 5,400 sq.ft</div>
-            <div class="card-footer">
+            <div class="h-card-footer">
               <span class="price">$3,400,000</span>
-              <button class="btn-outline">Inquire</button>
+              <button class="btn-outline">View Drill-down</button>
             </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern Mansion" />
-          <div class="card-body">
+        <!-- Res Card 3 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('res3')">
+          <div class="img-wrap">
+            <img id="img-res3" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Mountain Estate" />
             <span class="tag">For Sale</span>
+          </div>
+          <div class="h-card-body">
             <h3>The Aspen Forest Residence</h3>
             <p class="loc">Highland Ridge Valley</p>
             <div class="specs">6 Beds • 7 Baths • 8,900 sq.ft</div>
-            <div class="card-footer">
+            <div class="h-card-footer">
               <span class="price">$6,200,000</span>
-              <button class="btn-outline">Inquire</button>
+              <button class="btn-outline">View Drill-down</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Res Card 4 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('res4')">
+          <div class="img-wrap">
+            <img id="img-res4" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80" alt="Modernist Villa" />
+            <span class="tag">For Sale</span>
+          </div>
+          <div class="h-card-body">
+            <h3>Bel-Air Modernist Sanctuary</h3>
+            <p class="loc">Westside Ridge Hills</p>
+            <div class="specs">4 Beds • 4 Baths • 4,800 sq.ft</div>
+            <div class="h-card-footer">
+              <span class="price">$2,950,000</span>
+              <button class="btn-outline">View Drill-down</button>
             </div>
           </div>
         </div>
@@ -134,38 +175,69 @@
     </div>
   </section>
 
-  <!-- Commercial Lease Section -->
+  <!-- Section 4: Commercial Spaces to Rent (Horizontal Scroll) -->
   <section class="section bg-light" id="commercial">
     <div class="container">
-      <div class="section-head">
-        <h2>Commercial Spaces to Rent</h2>
-        <p>Premium corporate headquarters, flexible floors, and high-street retail hubs.</p>
+      <div class="section-head-flex">
+        <div>
+          <span class="sub-head">Prime Commercial Leasing</span>
+          <h2>Commercial Spaces to Rent</h2>
+          <p>Grade-A corporate hubs, flexible tech headquarters, and flagship retail floors.</p>
+        </div>
+        <div class="scroll-arrows">
+          <button class="arrow-btn" onclick="scrollSlider('com-scroll', -390)">←</button>
+          <button class="arrow-btn" onclick="scrollSlider('com-scroll', 390)">→</button>
+        </div>
       </div>
-      <div class="grid-cards">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Interior" />
-          <div class="card-body">
+
+      <div class="horizontal-scroll" id="com-scroll">
+        <!-- Com Card 1 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('com1')">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Office Floor" />
             <span class="tag commercial-tag">For Lease</span>
-            <h3>Vanguard Business Tower - Floor 18</h3>
-            <p class="loc">Downtown CBD</p>
-            <div class="specs">Ready-to-move • 180 Workstations • LEED Gold</div>
-            <div class="card-footer">
+          </div>
+          <div class="h-card-body">
+            <h3>Vanguard Business Tower - Fl. 18</h3>
+            <p class="loc">Downtown CBD • Financial Sector</p>
+            <div class="specs">12,500 sq.ft • 180 Workstations • LEED Gold</div>
+            <div class="h-card-footer">
               <span class="price">$28,000 / mo</span>
-              <button class="btn-outline">View Floorplan</button>
+              <button class="btn-outline">View Drill-down</button>
             </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Tech Hub" />
-          <div class="card-body">
+        <!-- Com Card 2 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('com2')">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=900&q=80" alt="Tech Loft" />
             <span class="tag commercial-tag">For Lease</span>
+          </div>
+          <div class="h-card-body">
             <h3>Nexus Creative Tech Loft</h3>
-            <p class="loc">Innovation Quarter</p>
-            <div class="specs">Open Layout • High Ceilings • 8,500 sq.ft</div>
-            <div class="card-footer">
+            <p class="loc">Innovation Quarter • Arts District</p>
+            <div class="specs">8,200 sq.ft • Open Layout • Double Height</div>
+            <div class="h-card-footer">
               <span class="price">$19,500 / mo</span>
-              <button class="btn-outline">View Floorplan</button>
+              <button class="btn-outline">View Drill-down</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Com Card 3 -->
+        <div class="h-card tilt-card" onclick="openDrillDown('com3')">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Triplex Tower" />
+            <span class="tag commercial-tag">For Lease</span>
+          </div>
+          <div class="h-card-body">
+            <h3>Aura Apex Global Triplex</h3>
+            <p class="loc">Marina Bay Business District</p>
+            <div class="specs">24,000 sq.ft • Entire Triplex • Helipad</div>
+            <div class="h-card-footer">
+              <span class="price">$55,000 / mo</span>
+              <button class="btn-outline">View Drill-down</button>
             </div>
           </div>
         </div>
@@ -173,64 +245,168 @@
     </div>
   </section>
 
-  <!-- REITs Investment Section -->
+  <!-- Section 5: Institutional REITs (Horizontal Scroll) -->
   <section class="section" id="reits">
     <div class="container">
-      <div class="section-head">
-        <h2>Institutional REIT Portfolios</h2>
-        <p>Fractional institutional real estate investments with transparent quarterly dividends.</p>
+      <div class="section-head-flex">
+        <div>
+          <span class="sub-head">Fractional Capital</span>
+          <h2>Institutional REIT Portfolios</h2>
+          <p>Access fractional institutional real estate delivering quarterly cash dividends.</p>
+        </div>
+        <div class="scroll-arrows">
+          <button class="arrow-btn" onclick="scrollSlider('reit-scroll', -390)">←</button>
+          <button class="arrow-btn" onclick="scrollSlider('reit-scroll', 390)">→</button>
+        </div>
       </div>
-      <div class="grid-cards reit-grid">
-        <div class="reit-card">
-          <span class="pill">Flagship Trust</span>
+
+      <div class="horizontal-scroll" id="reit-scroll">
+        <!-- REIT Card 1 -->
+        <div class="h-card reit-card tilt-card" onclick="openDrillDown('reit1')">
+          <div class="reit-pill">Grade-A Commercial</div>
           <h3>Urban Prime Commercial REIT</h3>
-          <div class="reit-metric">
-            <div class="yield">8.8%</div>
-            <div class="yield-lbl">Target Annual Yield</div>
+          <div class="yield-badge">8.8% <span>Net Annual Yield</span></div>
+          <p class="reit-meta">AUM: $140M • Leased to Global Fortune 500s</p>
+          <div class="specs">Min: $10,000 • Quarterly Cash Distribution</div>
+          <div class="h-card-footer">
+            <span class="price">Ticker: $UPRE</span>
+            <button class="btn-outline">Fund Drill-down</button>
           </div>
-          <ul class="reit-perks">
-            <li>Grade-A Office Assets in 3 Metros</li>
-            <li>Quarterly Direct Cash Distribution</li>
-            <li>Low Volatility Institutional Hedge</li>
-          </ul>
-          <button class="btn-primary w-full">Invest from $10,000</button>
         </div>
 
-        <div class="reit-card highlight">
-          <span class="pill featured-pill">High Growth</span>
-          <h3>Logistics & Modern Warehousing Trust</h3>
-          <div class="reit-metric">
-            <div class="yield">10.4%</div>
-            <div class="yield-lbl">Target Annual Yield</div>
+        <!-- REIT Card 2 -->
+        <div class="h-card reit-card highlight-card tilt-card" onclick="openDrillDown('reit2')">
+          <div class="reit-pill gold-pill">High Growth</div>
+          <h3>Modern Industrial Logistics REIT</h3>
+          <div class="yield-badge">10.4% <span>Net Annual Yield</span></div>
+          <p class="reit-meta">AUM: $210M • Automated E-Commerce Hubs</p>
+          <div class="specs">Min: $25,000 • Monthly Cash Distribution</div>
+          <div class="h-card-footer">
+            <span class="price">Ticker: $LOGX</span>
+            <button class="btn-outline">Fund Drill-down</button>
           </div>
-          <ul class="reit-perks">
-            <li>E-Commerce Fulfillment Centers</li>
-            <li>100% Lease Occupancy Rate</li>
-            <li>Monthly Distribution Structure</li>
-          </ul>
-          <button class="btn-primary w-full">Invest from $25,000</button>
+        </div>
+
+        <!-- REIT Card 3 -->
+        <div class="h-card reit-card tilt-card" onclick="openDrillDown('reit3')">
+          <div class="reit-pill">Life Sciences</div>
+          <h3>Bio-Park Research Trust</h3>
+          <div class="yield-badge">9.2% <span>Net Annual Yield</span></div>
+          <p class="reit-meta">AUM: $95M • Clinical Labs & Medical Corridors</p>
+          <div class="specs">Min: $15,000 • Semi-Annual Distribution</div>
+          <div class="h-card-footer">
+            <span class="price">Ticker: $MEDR</span>
+            <button class="btn-outline">Fund Drill-down</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact & Footer -->
+  <!-- Section 6: Interactive REIT Dividend Calculator -->
+  <section class="section bg-light" id="calculator">
+    <div class="container">
+      <div class="calculator-panel">
+        <div class="calc-header">
+          <span class="sub-head">Yield Simulator</span>
+          <h3>Interactive REIT Dividend & ROI Calculator</h3>
+          <p>Estimate quarterly cash flow distributions based on institutional asset yields.</p>
+        </div>
+        <div class="calc-body">
+          <div class="calc-inputs">
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Investment Allocation:</span>
+                <strong id="capitalDisplay">$50,000</strong>
+              </div>
+              <input type="range" id="capitalSlider" min="10000" max="500000" step="5000" value="50000" oninput="updateCalculator()" />
+            </div>
+
+            <div class="fund-selection">
+              <label>Select Portfolio Trust:</label>
+              <div class="fund-chips">
+                <button class="chip active" onclick="selectFund(8.8, this)">Urban Commercial (8.8%)</button>
+                <button class="chip" onclick="selectFund(10.4, this)">Logistics REIT (10.4%)</button>
+                <button class="chip" onclick="selectFund(9.2, this)">Life Sciences (9.2%)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="res-box">
+              <span class="lbl">Estimated Annual Dividend</span>
+              <span class="val" id="annualPayout">$4,400</span>
+            </div>
+            <div class="res-box">
+              <span class="lbl">Estimated Monthly Cash Flow</span>
+              <span class="val gold" id="monthlyPayout">$366</span>
+            </div>
+            <div class="res-box">
+              <span class="lbl">5-Year Projected Cumulative Return</span>
+              <span class="val" id="fiveYearPayout">$22,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Curated Agency Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="sub-head">Tailored Excellence</span>
+        <h2>Curated Agency & Advisory Services</h2>
+        <p>Comprehensive representation for ultra-high-net-worth individuals and corporate entities.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-box">
+          <div class="s-icon">🏛️</div>
+          <h3>Private Wealth Advisory</h3>
+          <p>Confidential acquisition and disposition of off-market private residences and legacy estates globally.</p>
+        </div>
+        <div class="service-box">
+          <div class="s-icon">📑</div>
+          <h3>Legal & Institutional Due Diligence</h3>
+          <p>End-to-end title verification, tax optimization structures, and regulatory cross-border compliance.</p>
+        </div>
+        <div class="service-box">
+          <div class="s-icon">🛎️</div>
+          <h3>VIP Concierge & Management</h3>
+          <p>Turn-key asset management, architectural remodeling oversight, and luxury tenant placement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1-Level Drill Down Slide-Over Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeDrillDown()">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+      <button class="drawer-close" onclick="closeDrillDown()">✕</button>
+      <div id="drawerContent">
+        <!-- Dynamic content injected by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lead Capture Footer -->
   <footer class="footer" id="contact">
     <div class="container footer-content">
       <div>
         <h3>Aura Estates</h3>
-        <p>Premium real estate brokerage and asset advisory.</p>
+        <p>Ultra-luxury brokerage, commercial leasing, and REIT asset management.</p>
       </div>
       <div class="footer-cta">
-        <h4>Schedule a Private Consultation</h4>
+        <h4>Request Private Portfolio Deck</h4>
         <div class="cta-form">
-          <input type="email" placeholder="Enter your business email" />
-          <button class="btn-primary">Connect With Advisor</button>
+          <input type="email" placeholder="Enter corporate or private email" />
+          <button class="btn-primary">Connect With Principal</button>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Aura Estates Partners. Created for portfolio presentation.</p>
+      <p>© 2026 Aura Estates Partners. Created for high-end portfolio representation.</p>
     </div>
   </footer>
 
