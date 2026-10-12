@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Estates | Luxury Real Estate & Investments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Aura<span>Estates</span></a>
+      <nav class="nav-menu">
+        <a href="#residential">Residential</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#reits">REITs</a>
+        <a href="#track-record">Track Record</a>
+      </nav>
+      <a href="#contact" class="btn-primary">Book Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">Prime Global Real Estate</div>
+      <h1>Where Architectural Elegance Meets Strategic Capital</h1>
+      <p>Curated luxury residences, Grade-A commercial leasing, and high-yield REIT investment portfolios.</p>
+
+      <!-- Search Filter Tab -->
+      <div class="search-box">
+        <div class="search-tabs">
+          <button class="tab-btn active" onclick="switchFilter('buy')">Buy Residential</button>
+          <button class="tab-btn" onclick="switchFilter('rent')">Commercial Lease</button>
+          <button class="tab-btn" onclick="switchFilter('reit')">REITs & Funds</button>
+        </div>
+        <div class="search-inputs">
+          <div class="input-group">
+            <label>Location</label>
+            <input type="text" placeholder="e.g. Dubai, London, Mumbai" />
+          </div>
+          <div class="input-group">
+            <label>Asset Type</label>
+            <select id="assetSelect">
+              <option>Penthouse / Villa</option>
+              <option>Prime Office Floor</option>
+              <option>High-Yield REIT</option>
+            </select>
+          </div>
+          <button class="btn-search">Explore Listings</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Track Record & Experience -->
+  <section class="section track-record" id="track-record">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>$520M+</h3>
+          <p>Transaction Volume</p>
+        </div>
+        <div class="stat-card">
+          <h3>16+</h3>
+          <p>Years of Advisory</p>
+        </div>
+        <div class="stat-card">
+          <h3>1,400+</h3>
+          <p>Homes & Offices Placed</p>
+        </div>
+        <div class="stat-card">
+          <h3>9.4%</h3>
+          <p>Average REIT Net Yield</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Residential Showcase -->
+  <section class="section" id="residential">
+    <div class="container">
+      <div class="section-head">
+        <h2>Featured Residential Estates</h2>
+        <p>Hand-picked residences designed for discerning homeowners and investors.</p>
+      </div>
+      <div class="grid-cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Villa" />
+          <div class="card-body">
+            <span class="tag">For Sale</span>
+            <h3>The Lumina Waterfront Villa</h3>
+            <p class="loc">Palm Horizon, Coastal Bay</p>
+            <div class="specs">5 Beds • 6 Baths • 7,200 sq.ft</div>
+            <div class="card-footer">
+              <span class="price">$4,850,000</span>
+              <button class="btn-outline">Inquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Penthouse" />
+          <div class="card-body">
+            <span class="tag">For Sale</span>
+            <h3>Skyline Crown Penthouse</h3>
+            <p class="loc">Midtown Financial Core</p>
+            <div class="specs">4 Beds • 5 Baths • 5,400 sq.ft</div>
+            <div class="card-footer">
+              <span class="price">$3,400,000</span>
+              <button class="btn-outline">Inquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern Mansion" />
+          <div class="card-body">
+            <span class="tag">For Sale</span>
+            <h3>The Aspen Forest Residence</h3>
+            <p class="loc">Highland Ridge Valley</p>
+            <div class="specs">6 Beds • 7 Baths • 8,900 sq.ft</div>
+            <div class="card-footer">
+              <span class="price">$6,200,000</span>
+              <button class="btn-outline">Inquire</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Lease Section -->
+  <section class="section bg-light" id="commercial">
+    <div class="container">
+      <div class="section-head">
+        <h2>Commercial Spaces to Rent</h2>
+        <p>Premium corporate headquarters, flexible floors, and high-street retail hubs.</p>
+      </div>
+      <div class="grid-cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Interior" />
+          <div class="card-body">
+            <span class="tag commercial-tag">For Lease</span>
+            <h3>Vanguard Business Tower - Floor 18</h3>
+            <p class="loc">Downtown CBD</p>
+            <div class="specs">Ready-to-move • 180 Workstations • LEED Gold</div>
+            <div class="card-footer">
+              <span class="price">$28,000 / mo</span>
+              <button class="btn-outline">View Floorplan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Tech Hub" />
+          <div class="card-body">
+            <span class="tag commercial-tag">For Lease</span>
+            <h3>Nexus Creative Tech Loft</h3>
+            <p class="loc">Innovation Quarter</p>
+            <div class="specs">Open Layout • High Ceilings • 8,500 sq.ft</div>
+            <div class="card-footer">
+              <span class="price">$19,500 / mo</span>
+              <button class="btn-outline">View Floorplan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REITs Investment Section -->
+  <section class="section" id="reits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Institutional REIT Portfolios</h2>
+        <p>Fractional institutional real estate investments with transparent quarterly dividends.</p>
+      </div>
+      <div class="grid-cards reit-grid">
+        <div class="reit-card">
+          <span class="pill">Flagship Trust</span>
+          <h3>Urban Prime Commercial REIT</h3>
+          <div class="reit-metric">
+            <div class="yield">8.8%</div>
+            <div class="yield-lbl">Target Annual Yield</div>
+          </div>
+          <ul class="reit-perks">
+            <li>Grade-A Office Assets in 3 Metros</li>
+            <li>Quarterly Direct Cash Distribution</li>
+            <li>Low Volatility Institutional Hedge</li>
+          </ul>
+          <button class="btn-primary w-full">Invest from $10,000</button>
+        </div>
+
+        <div class="reit-card highlight">
+          <span class="pill featured-pill">High Growth</span>
+          <h3>Logistics & Modern Warehousing Trust</h3>
+          <div class="reit-metric">
+            <div class="yield">10.4%</div>
+            <div class="yield-lbl">Target Annual Yield</div>
+          </div>
+          <ul class="reit-perks">
+            <li>E-Commerce Fulfillment Centers</li>
+            <li>100% Lease Occupancy Rate</li>
+            <li>Monthly Distribution Structure</li>
+          </ul>
+          <button class="btn-primary w-full">Invest from $25,000</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer-content">
+      <div>
+        <h3>Aura Estates</h3>
+        <p>Premium real estate brokerage and asset advisory.</p>
+      </div>
+      <div class="footer-cta">
+        <h4>Schedule a Private Consultation</h4>
+        <div class="cta-form">
+          <input type="email" placeholder="Enter your business email" />
+          <button class="btn-primary">Connect With Advisor</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Aura Estates Partners. Created for portfolio presentation.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
